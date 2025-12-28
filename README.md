@@ -48,26 +48,9 @@ All third-party API requests are executed strictly on the **server side**, as re
   - lyrics length
   - number of lines
 
----
 
-## Project Structure
-web_backend_assignment2/
-├── server.js
-├── package.json
-├── .env
-├── .env.example
-├── .gitignore
-├── README.md
-├── public/
-│ ├── index.html
-│ ├── app.js
-│ └── style.css
-└── screens/
 
-yaml
-Copy code
 
----
 
 ## Setup Instructions
 
@@ -76,27 +59,27 @@ Copy code
 npm install
 2. Create .env file
 env
-Copy code
+ 
 OPENWEATHER_API_KEY=YOUR_API_KEY_HERE
 PORT=3000
 3. Run the server
 bash
-Copy code
+ 
 npm run dev
 Open in browser:
 
 arduino
-Copy code
+ 
 http://localhost:3000
 API Endpoints
 Weather
 bash
-Copy code
+ 
 GET /api/weather?city=Almaty
 Example response:
 
 json
-Copy code
+ 
 {
   "temperature": -2.05,
   "description": "mist",
@@ -108,18 +91,18 @@ Copy code
 }
 Country Info
 bash
-Copy code
+ 
 GET /api/country?code=KZ
 Returns country details including currency and flag.
 
 Lyrics Metadata
 bash
-Copy code
+ 
 GET /api/lyrics?artist=Coldplay&title=Yellow
 Example response:
 
 json
-Copy code
+ 
 {
   "artist": "Coldplay",
   "title": "Yellow",
