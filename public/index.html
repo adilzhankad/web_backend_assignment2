@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather & Location</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Weather & Location</h1>
+    <p class="sub">
+      Server-side OpenWeather fetching + Country details + Lyrics metadata (server-side)
+    </p>
+
+    <!-- Weather search -->
+    <form id="form" class="row">
+      <input id="city" placeholder="Enter city (e.g., Almaty)" />
+      <button type="submit">Get weather</button>
+    </form>
+
+    <div id="error" class="error hidden"></div>
+
+    <div class="grid">
+      <div class="box"><div class="label">Temperature</div><div id="temp" class="value">—</div></div>
+      <div class="box"><div class="label">Feels like</div><div id="feels" class="value">—</div></div>
+      <div class="box"><div class="label">Description</div><div id="desc" class="value">—</div></div>
+      <div class="box"><div class="label">Wind speed</div><div id="wind" class="value">—</div></div>
+      <div class="box"><div class="label">Country code</div><div id="country" class="value">—</div></div>
+      <div class="box"><div class="label">Rain (last 3h)</div><div id="rain" class="value">—</div></div>
+
+      <div class="box full">
+        <div class="label">Coordinates</div>
+        <div id="coords" class="value">—</div>
+      </div>
+
+      <div class="box full">
+        <div class="label">Country info (REST Countries)</div>
+        <div id="countryInfo" class="value">—</div>
+        <img id="flag" alt="flag" class="flag hidden" />
+      </div>
+
+      <!-- Lyrics search -->
+      <div class="box full">
+        <div class="label">Lyrics API (lyrics.ovh) — preview up to 90 chars</div>
+
+        <form id="lyricsForm" class="row">
+          <input id="artist" placeholder="Artist (e.g., Coldplay)" />
+          <input id="title" placeholder="Song title (e.g., Yellow)" />
+          <button type="submit">Find lyrics</button>
+        </form>
+
+        <div id="lyricsInfo" class="value">—</div>
+      </div>
+    </div>
+
+    <pre id="raw" class="raw">JSON will appear here...</pre>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
